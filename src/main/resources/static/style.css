@@ -6,7 +6,7 @@
     --fundo-header: #800000;
     --fundo-tema: #570000;
     --fundo-light: #e3e3e3;
-    --texto: black
+    --texto: black;
 }
 
 body {
@@ -110,17 +110,18 @@ main#intro {
 
 #textoIntro ul {
     font-family: "Nunito Sans", sans-serif;
-    font-size: 20px;
+    font-size: 24px;
     font-variation-settings:
     "wdth" 100,
     "YTLC" 500;
 }
 
-/* PRODUTOS */
+/* CADÁPIO */
 
 section#cardapio {
-    border: solid green;
     text-align: center;
+    margin-top: 0;
+    padding-bottom: 5%;
 
     background-color: #570000;
 }
@@ -139,6 +140,104 @@ section#cardapio {
 }
 
 #produtos .boxProduto {
-    border: solid blue;
+    background-color: var(--fundo-light);
+    border-radius: 15px;
     width: 25%;
+
+    box-shadow: 4px 4px 4px rgb(9, 9, 9);
+}
+
+.boxProduto .tituloProduto {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 32px;
+}
+
+.boxProduto img {
+    width: 75%;
+    height: 75%;
+}
+
+.boxProduto .precoProduto {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 20px;
+    font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25%;
+    font-size: 24px;
+}
+
+.boxProduto .precoProduto input {
+    height: 8%;
+    border-radius: 25%;
+    color: white;
+    background-color: var(--fundo-tema);
+    font-size: 24px;
+}
+
+.boxProduto .precoProduto input:hover {
+    cursor: pointer;
+    transform: scale(1.3);
+    transition: transform 0.4s ease;
+}
+
+/* LOCALIZAÇÃO */
+
+#localizacao {
+    background-color: var(--fundo-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5%;
+}
+
+#localizacao #tituloLoc {
+    color: var(--fundo-tema);
+
+    text-shadow: 4px 4px 4px black;
+
+    border-bottom: 4px solid var(--fundo-tema);
+    width: 100%;
+    text-align: center;
+
+    margin-bottom: 5%;
+
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+}
+
+#localizacao #locInfo {
+    background-color: var(--fundo-tema);
+    color: white;
+
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 24px;
+    font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+
+    border-radius: 15px;
+    padding: 3%;
+
+    text-align: center;
+}
+
+#locInfo a {
+    text-decoration: none;
+    color: rgb(0, 157, 255);
+}
+
+#locInfo a:hover {
+    transform: scale(1.8);
+    transition: transform 0.4s ease;
 }
