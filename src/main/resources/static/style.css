@@ -139,7 +139,17 @@ section#cardapio {
     font-size: 32px;
 }
 
+#produtos {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Define duas colunas de tamanhos iguais */
+        gap: 10px; /* Espaçamento entre os itens */
+}
+
 #produtos .boxProduto {
+    display: flex;
+    flex-direction: column;
+    
+
     background-color: var(--fundo-light);
     border-radius: 15px;
     width: 25%;
