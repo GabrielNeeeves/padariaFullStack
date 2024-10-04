@@ -8,3 +8,13 @@ CREATE VIEW v_produtos AS
 	
 SELECT *
 FROM v_produtos
+
+
+--VIEW 'PEDIDOS'
+CREATE VIEW v_pedidos AS
+	SELECT 	pe.idPedido Cod_Pedido, pe.idProduto Cod_Produto, pe.qtdProduto Quantidade,
+			pe.valor Valor_Unitario, pe.DATA DATA, (pe.qtdProduto*pe.valor) valor_total
+	FROM pedidos pe;
+	
+SELECT *
+FROM v_pedidos

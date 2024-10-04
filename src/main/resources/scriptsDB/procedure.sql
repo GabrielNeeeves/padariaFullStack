@@ -21,3 +21,21 @@ CALL sp_createProduto ('Bolo de cenoura', 15.00, 50)
 
 SELECT *
 FROM v_produtos
+
+SELECT *
+FROM pedidos
+--PROCEDURE 'PEDIDOS'
+CREATE PROCEDURE sp_createPedido (
+	idProd int,
+	qtdProd int,
+	valor decimal(10,2)
+)
+LANGUAGE plpgsql
+AS $$ BEGIN
+	IF qtdProd <= 0 THEN
+	RAISE EXCEPTION 'A quantidade deve ser maior que 0';
+	END IF;
+	
+END
+
+

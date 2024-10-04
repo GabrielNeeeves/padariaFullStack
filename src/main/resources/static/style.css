@@ -140,19 +140,22 @@ section#cardapio {
 }
 
 #produtos {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* Define duas colunas de tamanhos iguais */
-        gap: 10px; /* Espaçamento entre os itens */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Define duas colunas de tamanhos iguais */
+    gap: 2% 10%; /* Espaçamento entre os itens */
+    padding: 2% 25%;
 }
 
 #produtos .boxProduto {
+    border: solid yellow;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
-    
 
     background-color: var(--fundo-light);
     border-radius: 15px;
-    width: 25%;
+    /* width: 100%; */
 
     box-shadow: 4px 4px 4px rgb(9, 9, 9);
 }
@@ -185,7 +188,7 @@ section#cardapio {
 }
 
 .boxProduto .precoProduto input {
-    height: 8%;
+    /* height: 8%; */
     border-radius: 25%;
     color: white;
     background-color: var(--fundo-tema);
